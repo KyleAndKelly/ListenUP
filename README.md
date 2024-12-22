@@ -12,3 +12,4 @@ ListenUp is a desktop app that helps language learners improve their listening s
 ## Notes
 
 You can find the detailed development notes [here](./devNote/devNote.md).
+- 2024.12.22 Complete the import of libVLC and implement basic video playback functionality.
