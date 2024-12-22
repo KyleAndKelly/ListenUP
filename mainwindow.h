@@ -3,18 +3,11 @@
 
 #include <QMainWindow>
 #include <QFileDialog>
-#include <QMediaPlayer>
-#include <QVideoWidget>
-#include <QPainter>
-#include <iostream>
+#include <QWidget>
+#include <QVBoxLayout>
+#include <vlc/vlc.h>
+#include <vlc/libvlc.h>
 
-extern "C" {
-    #include <libavformat/avformat.h>
-    #include <libavcodec/avcodec.h>
-    #include <libavutil/avutil.h>
-    #include <libswscale/swscale.h>
-#include <libavutil/imgutils.h>
-}
 
 namespace Ui {
 class MainWindow;
@@ -30,11 +23,17 @@ public:
 
 private slots:
     void on_openButton_clicked();
-    void renderFrame(AVFrame *frame);
 
 private:
     Ui::MainWindow *ui;
-    void openVideo(const QString &filePath);  // Declaration of openVideo function
+    void openVideo(const QString &filePath); // Declaration of openVideo function
+
+    // libVLC player-related members
+    libvlc_instance_t *vlcInstance = nullptr;
+    libvlc_media_player_t *mediaPlayer = nullptr;
+    libvlc_media_t *media = nullptr;
+    QWidget *videoWidget = nullptr;
+    QVBoxLayout *layout = nullptr;
 };
 
 #endif // MAINWINDOW_H

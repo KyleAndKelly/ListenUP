@@ -5,14 +5,13 @@
 #-------------------------------------------------
 
 QT       += core gui
-QT       += multimedia multimediawidgets
 CONFIG   += c++11
 
-INCLUDEPATH += C:\lib\ffmpeg\include
+INCLUDEPATH += "D:/Project/cppProject/ListenUp/include"
+LIBS += -L"D:/Project/cppProject/ListenUp/lib" -lvlc -lvlccore -llibvlccore  -llibvlc
 
-LIBS += -LC:\lib\ffmpeg/lib
 
-LIBS += -lavformat -lavcodec -lavutil -lswscale
+
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
