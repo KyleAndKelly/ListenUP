@@ -1,5 +1,5 @@
 # ListenUp
-ListenUp is a desktop app that helps users improve their Japanese listening skills by playing videos with synchronized subtitles. 
+ListenUp is a desktop app that helps language learners improve their listening skills by playing videos with synchronized subtitles. developed by C++/QT
 
 
 
