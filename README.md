@@ -8,3 +8,7 @@ ListenUp is a desktop app that helps users improve their Japanese listening skil
 - Synchronized scrolling subtitles while the video plays.
 - Real-time translation for better understanding.
 - Adjustable playback speed for enhanced practice.
+
+## Notes
+
+You can find the detailed development notes [here](./devNote/devNote.md).
