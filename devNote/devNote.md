@@ -67,3 +67,10 @@ media = libvlc_media_new_path(vlcInstance, filePathUtf8.constData());
 
 
 
+## issue3. 字幕乱码问题
+
+### solution
+```
+    QTextStream in(&file);
+    in.setCodec("UTF-8");
+```
